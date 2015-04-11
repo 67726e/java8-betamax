@@ -1,0 +1,23 @@
+apply plugin: "java"
+apply plugin: "idea"
+
+sourceCompatibility = 1.8
+version = "1.0"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://oss.jfrog.org/oss-snapshot-local/"
+    }
+}
+
+dependencies {
+    compile "org.springframework:spring-context:4.1.2.RELEASE"
+    compile "org.springframework:spring-web:4.1.2.RELEASE"
+
+    testCompile "org.springframework:spring-test:4.1.2.RELEASE"
+    testCompile "junit:junit:4.12"
+    testCompile "org.codehaus.groovy:groovy-all:2.3.3"
+    testCompile "co.freeside.betamax:betamax-proxy:2.0-SNAPSHOT"
+    testCompile "co.freeside.betamax:betamax-junit:2.0-SNAPSHOT"
+}
